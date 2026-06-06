@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Merenung Hari",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-07",
+    "genre": "Pop",
+    "isrc": "IDB772122770",
+    "upc": "8990009194188",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 2,
+    "title": "Keindahan Kota Rangkasbitung",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-06",
+    "genre": "Indonesian Pop",
+    "upc": "5063964472592",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 3,
+    "title": "Rindu Tetap Sama",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-05",
+    "genre": "Indonesian Pop",
+    "upc": "5063964472554",
+    "label": "Roman Yosi Music"
+  }
+]
