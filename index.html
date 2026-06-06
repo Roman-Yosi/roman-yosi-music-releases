@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <title>ROMAN YOSI TV</title>
+
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+
+  <style>
+    body {
+      margin:0;
+      background:#000;
+      color:#fff;
+      font-family:sans-serif;
+      display:flex;
+    }
+
+    .sidebar{
+      width:220px;
+      background:#111;
+      height:100vh;
+      position:fixed;
+      padding:20px;
+    }
+
+    .sidebar h2{
+      color:#ff0050;
+    }
+
+    .menu a{
+      display:block;
+      color:#fff;
+      text-decoration:none;
+      margin:12px 0;
+    }
+
+    .main{
+      margin-left:240px;
+      width:100%;
+      height:100vh;
+      overflow-y:scroll;
+      scroll-snap-type:y mandatory;
+    }
+
+    .video-box{
+      height:100vh;
+      scroll-snap-align:start;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+
+    video{
+      height:90%;
+      border-radius:12px;
+    }
+
+    .actions{
+      position:absolute;
+      right:20px;
+      bottom:100px;
+      text-align:center;
+    }
+
+    .actions div{
+      margin:15px 0;
+      cursor:pointer;
+    }
+
+    .info{
+      position:absolute;
+      bottom:40px;
+      left:20px;
+    }
+
+    .ads{
+      position:absolute;
+      top:10px;
+      right:10px;
+      background:#fff;
+      color:#000;
+      padding:8px;
+      border-radius:6px;
+    }
+
+    .topbar{
+      position:fixed;
+      top:0;
+      left:240px;
+      right:0;
+      background:#000;
+      padding:10px;
+      border-bottom:1px solid #222;
+      text-align:center;
+    }
+
+    .live{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:red;
+      padding:15px;
+      border-radius:50%;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class='sidebar'>
+    <h2>ROMAN YOSI TV</h2>
+
+    <div class='menu'>
+      <a href='#'>Jelajahi</a>
+      <a href='#'>Terdekat</a>
+      <a href='#'>Teman</a>
+      <a href='#'>Mengikuti</a>
+      <a href='#'>Saran</a>
+      <hr/>
+      <a href='#'>Live</a>
+    </div>
+  </div>
+
+  <!-- Topbar -->
+  <div class='topbar'>
+    Untuk Anda | Mengikuti
+  </div>
+
+  <!-- Main -->
+  <div class='main'>
+
+    <div class='video-box'>
+      <video autoplay='autoplay' loop='loop' muted='muted'>
+        <source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'/>
+      </video>
+
+      <div class='info'>
+        <h3>@romanyosi</h3>
+        <p>Video viral 🔥</p>
+      </div>
+
+      <div class='actions'>
+        <div onclick='like(this)'>❤️<br/><span>10</span></div>
+        <div onclick='comment()'>💬</div>
+        <div onclick='share()'>🔗</div>
+      </div>
+
+      <div class='ads'>IKLAN</div>
+    </div>
+
+  </div>
+
+  <div class='live' onclick='live()'>LIVE</div>
+
+  <script type='text/javascript'>
+    function like(el){
+      var span = el.getElementsByTagName("span")[0];
+      span.innerHTML = parseInt(span.innerHTML) + 1;
+    }
+
+    function comment(){
+      alert("Komentar (simulasi)");
+    }
+
+    function share(){
+      alert("Link dibagikan!");
+    }
+
+    function live(){
+      alert("Fitur live");
+    }
+  </script>
+
+</body>
+</html>
