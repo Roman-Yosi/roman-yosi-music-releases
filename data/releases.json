@@ -26,5 +26,59 @@
     "genre": "Indonesian Pop",
     "upc": "5063964472554",
     "label": "Roman Yosi Music"
+  },
+  {
+    "id": 4,
+    "title": "Jejak Di Dada",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-04",
+    "genre": "Indonesian Pop",
+    "upc": "5063964489545",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 5,
+    "title": "Suara Dalam Otak",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-04",
+    "genre": "Indonesian Pop",
+    "upc": "5063964472424",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 6,
+    "title": "Setengah Cerita",
+    "artist": "Roman Yosi",
+    "release_date": "2026-06-02",
+    "genre": "Indonesian Pop",
+    "upc": "5063964489293",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 7,
+    "title": "Engkaulah Dewi Sang Penebar",
+    "artist": "Roman Yosi",
+    "release_date": "2026-05-21",
+    "genre": "Indie Pop",
+    "upc": "5063964417050",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 8,
+    "title": "Ada Suara Dalam Otak",
+    "artist": "Roman Yosi",
+    "release_date": "2026-05-21",
+    "genre": "Indie Pop",
+    "upc": "5063964417098",
+    "label": "Roman Yosi Music"
+  },
+  {
+    "id": 9,
+    "title": "Ternyata Dia Cinta Tersembunyi",
+    "artist": "Roman Yosi",
+    "release_date": "2026-05-21",
+    "genre": "Indie Pop",
+    "upc": "5063964417227",
+    "label": "Roman Yosi Music"
   }
 ]
