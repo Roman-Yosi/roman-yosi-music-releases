@@ -1,183 +1,169 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' xmlns='http://www.w3.org/1999/xhtml'
-      xmlns:b='http://www.google.com/2005/gml/b'
-      xmlns:data='http://www.google.com/2005/gml/data'
-      xmlns:expr='http://www.google.com/2005/gml/expr'>
-
+<html lang="id">
 <head>
-  <title>ROMAN YOSI TV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta charset='UTF-8'/>
-  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title>Roman Yosi Official Music Releases</title>
+  <meta name="description" content="Official music release catalog of Roman Yosi. Discography, singles, ISRC, UPC, and streaming links.">
+
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="Roman Yosi Music Releases">
+  <meta property="og:description" content="Official release catalog and discography of Roman Yosi (Indie Pop Artist from Indonesia).">
+  <meta property="og:type" content="website">
 
   <style>
     body {
-      margin:0;
-      background:#000;
-      color:#fff;
-      font-family:sans-serif;
-      display:flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
     }
 
-    .sidebar{
-      width:220px;
-      background:#111;
-      height:100vh;
-      position:fixed;
-      padding:20px;
+    header {
+      background: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
     }
 
-    .sidebar h2{
-      color:#ff0050;
+    h1 {
+      margin: 0;
+      font-size: 24px;
     }
 
-    .menu a{
-      display:block;
-      color:#fff;
-      text-decoration:none;
-      margin:12px 0;
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
     }
 
-    .main{
-      margin-left:240px;
-      width:100%;
-      height:100vh;
-      overflow-y:scroll;
-      scroll-snap-type:y mandatory;
+    .search {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
     }
 
-    .video-box{
-      height:100vh;
-      scroll-snap-align:start;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
+    .card {
+      background: #1e1e1e;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid #2a2a2a;
     }
 
-    video{
-      height:90%;
-      border-radius:12px;
+    .card:hover {
+      background: #2a2a2a;
     }
 
-    .actions{
-      position:absolute;
-      right:20px;
-      bottom:100px;
-      text-align:center;
+    .tag {
+      font-size: 12px;
+      color: #aaa;
     }
 
-    .actions div{
-      margin:15px 0;
-      cursor:pointer;
+    .btn {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
-    .info{
-      position:absolute;
-      bottom:40px;
-      left:20px;
+    .btn:hover {
+      background: #555;
     }
 
-    .ads{
-      position:absolute;
-      top:10px;
-      right:10px;
-      background:#fff;
-      color:#000;
-      padding:8px;
-      border-radius:6px;
-    }
-
-    .topbar{
-      position:fixed;
-      top:0;
-      left:240px;
-      right:0;
-      background:#000;
-      padding:10px;
-      border-bottom:1px solid #222;
-      text-align:center;
-    }
-
-    .live{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:red;
-      padding:15px;
-      border-radius:50%;
-      cursor:pointer;
+    a {
+      color: #4da3ff;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Sidebar -->
-  <div class='sidebar'>
-    <h2>ROMAN YOSI TV</h2>
+<header>
+  <h1>Roman Yosi Music Releases</h1>
+  <p class="tag">Official Discography Database</p>
+</header>
 
-    <div class='menu'>
-      <a href='#'>Jelajahi</a>
-      <a href='#'>Terdekat</a>
-      <a href='#'>Teman</a>
-      <a href='#'>Mengikuti</a>
-      <a href='#'>Saran</a>
-      <hr/>
-      <a href='#'>Live</a>
-    </div>
-  </div>
+<div class="container">
 
-  <!-- Topbar -->
-  <div class='topbar'>
-    Untuk Anda | Mengikuti
-  </div>
+  <input class="search" id="search" placeholder="Search release..." onkeyup="render()">
 
-  <!-- Main -->
-  <div class='main'>
+  <div id="app"></div>
 
-    <div class='video-box'>
-      <video autoplay='autoplay' loop='loop' muted='muted'>
-        <source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'/>
-      </video>
+</div>
 
-      <div class='info'>
-        <h3>@romanyosi</h3>
-        <p>Video viral 🔥</p>
+<script>
+const releases = [
+  {
+    title: "Merenung Hari",
+    date: "2026-06-07",
+    genre: "Pop",
+    isrc: "IDB772122770",
+    upc: "8990009194188",
+    label: "Roman Yosi Music"
+  },
+  {
+    title: "Keindahan Kota Rangkasbitung",
+    date: "2026-06-06",
+    genre: "Pop / Indonesian Pop",
+    upc: "5063964472592"
+  },
+  {
+    title: "Rindu Tetap Sama",
+    date: "2026-06-05",
+    genre: "Pop / Indonesian Pop",
+    upc: "5063964472554"
+  },
+  {
+    title: "Jejak Di Dada",
+    date: "2026-06-04",
+    genre: "Pop / Indonesian Pop",
+    upc: "5063964489545"
+  },
+  {
+    title: "Suara Dalam Otak",
+    date: "2026-06-04",
+    genre: "Pop / Indonesian Pop",
+    upc: "5063964472424"
+  },
+  {
+    title: "Setengah Cerita",
+    date: "2026-06-02",
+    genre: "Pop / Indonesian Pop",
+    upc: "5063964489293"
+  }
+];
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase();
+
+  let html = releases
+    .filter(r => r.title.toLowerCase().includes(q))
+    .map(r => `
+      <div class="card">
+        <h3>${r.title}</h3>
+        <p class="tag">Release Date: ${r.date}</p>
+        <p class="tag">Genre: ${r.genre || "-"}</p>
+        <p class="tag">ISRC: ${r.isrc || "-"}</p>
+        <p class="tag">UPC: ${r.upc || "-"}</p>
+        <p class="tag">Label: ${r.label || "Roman Yosi Music"}</p>
       </div>
+    `).join("");
 
-      <div class='actions'>
-        <div onclick='like(this)'>❤️<br/><span>10</span></div>
-        <div onclick='comment()'>💬</div>
-        <div onclick='share()'>🔗</div>
-      </div>
+  document.getElementById("app").innerHTML = html;
+}
 
-      <div class='ads'>IKLAN</div>
-    </div>
-
-  </div>
-
-  <div class='live' onclick='live()'>LIVE</div>
-
-  <script type='text/javascript'>
-    function like(el){
-      var span = el.getElementsByTagName("span")[0];
-      span.innerHTML = parseInt(span.innerHTML) + 1;
-    }
-
-    function comment(){
-      alert("Komentar (simulasi)");
-    }
-
-    function share(){
-      alert("Link dibagikan!");
-    }
-
-    function live(){
-      alert("Fitur live");
-    }
-  </script>
+render();
+</script>
 
 </body>
 </html>
